@@ -2,24 +2,22 @@
     <head>
             <title>TC441912</title>
             <header>
-        <h1 align="center">Important information needed
+        <h1 align="center">Quiz #1
                 </h1>
         </header>
         
         <body>
             <center>
-            <img src="clipboard-sign-up.jpg"><br>
-            First name: <input type="text" name="firstname"><br>
-            Last name: <input type="text" name="lastname"><br>
-            Phone Number: <input type="text" name="Phone Number"><br>
-            SSN: <input type="text" name="SSN"><br>
-            <button type="button" onclick="reveal()">Confirm</button>
-                
-            <p id="hidden"></p>
+                <p>What's you favorite fruit?</p>
+            <input type="text" id="fruit"/><br>
+            <button type="button" onclick="caps()">Confirm</button>
+                <p id="newtxt"></p>
                     
         <script>
-            function reveal() {
-            document.getElementById("hidden").innerHTML = "Just Kidding. This information is not being recorded.";
+            function caps() {
+            var str = document.getElementById('fruit').value;
+            var res = str.toUpperCase();
+            document.getElementById("newtxt").innerHTML = res;
             }
         </script>
             </center>
